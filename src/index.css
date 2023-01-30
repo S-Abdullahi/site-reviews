@@ -5,9 +5,79 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 4rem;
+  text-align: center;
+  font-size: 62.5%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title{
+  font-size: 3rem;
+  margin-bottom: 6rem;
+}
+
+.main-con{
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.review-con{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-con{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.review-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.review-title{
+  font-size: 1.2rem;
+  margin-top: -1rem;
+}
+
+.quote-text{
+  font-size: 1rem;
+  color: gray;
+}
+
+.quote-icon{
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: #e85d04;
+}
+
+button{
+  background-color: #283618;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover{
+  background-color: #e85d04;
 }
