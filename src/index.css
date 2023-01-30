@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,60 +10,76 @@ body {
   font-size: 62.5%;
 }
 
-.title{
+.title {
   font-size: 3rem;
   margin-bottom: 6rem;
 }
 
-.main-con{
+.main-con {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
+  width: 65%;
   align-items: center;
   justify-items: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
 }
 
-.review-con{
+.slider-con {
+  position: relative;
+  display: flex;
+  width: 50vw;
+  height: 45rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review-con {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  z-index: -4;
+  transition: all 0.5s ease-in-out;
 }
 
-.image-con{
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
+.image-con {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
 }
 
-.review-image{
+.review-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.name{
+.name {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.review-title{
+.review-title {
   font-size: 1.2rem;
   margin-top: -1rem;
 }
 
-.quote-text{
-  font-size: 1rem;
+.quote-text {
+  font-size: 1.3rem;
   color: gray;
+  line-height: 1.8rem;
 }
 
-.quote-icon{
+.quote-icon {
   font-size: 3rem;
   margin-top: 2rem;
   color: #e85d04;
 }
 
-button{
+.btn {
   background-color: #283618;
   color: white;
   font-size: 1rem;
@@ -78,6 +94,26 @@ button{
   transition: all 0.2s ease-in-out;
 }
 
-button:hover{
+button:hover {
   background-color: #e85d04;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-con {
+    width: 95%;
+  }
+}
+
+.review-con.active{
+  transform: translateX(0);
+}
+
+.review-con.inactive{
+  transform: translate(100%);
+  opacity: 0;
+}
+
+.review-con.inactiveLeft{
+  transform: translate(-100%);
+  opacity: 0;
 }
